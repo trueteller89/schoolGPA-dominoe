@@ -1,0 +1,100 @@
+<p>Domino</p>
+
+<label>
+    <input type="radio" ng-model="direction" value="hcclock">
+    counter-clockwise
+</label><br/>
+<label>
+    <input type="radio" ng-model="direction" value="strictly">
+    strictly
+</label><br/>
+<label>
+    <input type="radio" ng-model="direction" value="hclock">
+    clockwise
+</label><br/>
+<br>
+size:<input type="range" ng-model="dominoSize" min="{{dominoSizeMin}}" max="{{dominoSizeMax}}" ng-change="changeSize()"><br>
+<!--speed:<input type="range" ng-model="controlSpeed" min="{{controlSpeedMin}}" max="{{controlSpeedMax}}"><br>-->
+
+<label>top:<select ng-model="topPoint"  ng-options="point as point for point in avaliablePoints">
+</select></label>
+<br>
+<label>bottom:<select ng-model="bottomPoint" ng-options="point as point for point in avaliablePoints">
+
+</select></label>
+<br>
+<div class="dominoe" ng-class="{'horizontal-clock':direction=='hclock', 'horizontal-counterclock':direction=='hcclock'}" ng-style="{'width' : width , 'height' : height}">
+    <div class="half">
+        <div ng-switch="topPoint">
+            <div ng-switch-when="1">
+                <div class="part"></div>
+                <div class="part">
+                    <div class="middle"></div>
+                </div>
+                <div class="part"></div>
+            </div>
+            <div ng-switch-when="2">
+                <div class="part"><div class="right"></div></div>
+                <div class="part"></div>
+                <div class="part"><div class="left"></div></div>
+            </div>
+            <div ng-switch-when="3">
+                <div class="part"><div class="right"></div></div>
+                <div class="part"><div class="middle"></div></div>
+                <div class="part"><div class="left"></div></div>
+            </div>
+            <div ng-switch-when="4">
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+                <div class="part"></div>
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+            </div>
+            <div ng-switch-when="5">
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+                <div class="part"><div class="middle"></div></div>
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+            </div>
+            <div ng-switch-when="6">
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="half">
+        <div ng-switch="bottomPoint">
+            <div ng-switch-when="1">
+                <div class="part"></div>
+                <div class="part">
+                    <div class="middle"></div>
+                </div>
+                <div class="part"></div>
+            </div>
+            <div ng-switch-when="2">
+                <div class="part"><div class="right"></div></div>
+                <div class="part"></div>
+                <div class="part"><div class="left"></div></div>
+            </div>
+            <div ng-switch-when="3">
+                <div class="part"><div class="right"></div></div>
+                <div class="part"><div class="middle"></div></div>
+                <div class="part"><div class="left"></div></div>
+            </div>
+            <div ng-switch-when="4">
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+                <div class="part"></div>
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+            </div>
+            <div ng-switch-when="5">
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+                <div class="part"><div class="middle"></div></div>
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+            </div>
+            <div ng-switch-when="6">
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+                <div class="part"><div class="left"></div><div class="right"></div></div>
+            </div>
+        </div>
+    </div>
+</div>

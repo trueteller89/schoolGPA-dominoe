@@ -1,0 +1,38 @@
+<p>School GPA calculator</p>
+<p>average:{{sumAvg}}</p>
+<span>grade {{currentGrade}}</span>
+<button ng-click="removeGrade()">X</button><br>
+select grade:<select ng-model="currentGrade" ng-change="showGrade()">
+    <option ng-repeat="grade in grades">{{grade.gradename}}</option>
+</select>
+<br>
+add grade:<input type="text" ng-model="newGrade.gradename">
+<button ng-click="addGrade()">+</button><br>
+<table class="table table-students">
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>gpa</th>
+        <th>action</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <td><input type="text" ng-model="newStudent.name"></td>
+        <td><input type="number" ng-model="newStudent.gpa" min="0" max="5"></td>
+        <td>
+            <button ng-click="addStudent()">+</button>
+        </td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr ng-repeat="student in currentStudents track by $index">
+        <td>{{student.name}}</td>
+        <td>{{student.gpa}}</td>
+        <td>
+            <button ng-click="removeStudent($index)">X</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,30 @@
+{
+  "grades": [
+    {
+      "gradename":"8a",
+      "students": [
+        {
+          "name": "Duncan Haldane",
+          "gpa": 4.5
+        },
+        {
+          "name": "Michael Kosterlitz",
+          "gpa": 4.2
+        }
+      ]
+    },
+    {
+      "gradename":"8b",
+      "students": [
+        {
+          "name": "Robert Millikan",
+          "gpa": 4.8
+        },
+        {
+          "name": "James Chadwick",
+          "gpa": 4.7
+        }
+      ]
+    }
+  ]
+}

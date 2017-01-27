@@ -1,0 +1,17 @@
+{
+  "dominoSize":{
+    "dominoSize":1,
+    "dominoSizeMin":1,
+    "dominoSizeMax":5
+  },
+  "controlSpeed":{
+    "controlSpeed":1,
+    "controlSpeedMin":0.1,
+    "controlSpeedMax":10
+  },
+  "defaultHalfDominoeValue":1,
+  "avaliablePoints":[1,2,3,4,5,6],
+  "width":48,
+  "height":100
+
+}
